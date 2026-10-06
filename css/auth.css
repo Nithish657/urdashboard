@@ -485,3 +485,31 @@ body.lms section.view{padding-top:30px}
 .tl li::before{content:"";position:absolute;left:-25px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--azure);box-shadow:0 0 0 4px var(--soft)}
 .tl b{display:block}.tl span{font-size:.85rem;color:var(--azure-d);font-weight:700}
 .tl p{color:var(--ink-2);font-size:.92rem}
+
+/* =========================================================
+   Laptop header: fixed, constant height, no jump on scroll.
+   Everything below is laptop-only, so the mobile UI is untouched.
+   ========================================================= */
+@media(min-width:961px){
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding-top:0}
+  body:not(.lms){padding-top:70px}
+  .nav .wrap,header.nav.scrolled .wrap{height:70px}
+  .nav ul{gap:clamp(14px,1.8vw,26px);white-space:nowrap}
+  .nav-actions{flex:none}
+  /* Open LMS (and every primary button) stays blue on hover */
+  .btn-primary:hover,.btn-primary:focus-visible{background:var(--azure);color:#fff;box-shadow:0 14px 28px -10px var(--azure)}
+}
+/* LMS laptop header: steady height, content centred, nothing squeezed */
+@media(min-width:861px){
+  body.lms .topbar,body.lms .topbar.scrolled{align-items:center}
+  body.lms .tb-left{flex:1;min-width:0}
+  body.lms .top-actions{flex:none}
+}
+@media(min-width:861px) and (max-width:1100px){body.lms .me-text{display:none}}
+
+/* Open LMS and the user button share one size (laptop only) */
+@media(min-width:961px){
+  .nav-actions .btn,.nav-actions .user-btn{height:44px;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;font-size:.95rem;line-height:1}
+  .nav-actions .btn{padding:0 22px}
+  .nav-actions .user-btn.out{padding:0 20px}
+}
