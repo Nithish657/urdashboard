@@ -15,9 +15,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=5">
-<link rel="stylesheet" href="css/lms.css?v=5">
-<link rel="stylesheet" href="css/auth.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=10">
+<link rel="stylesheet" href="css/lms.css?v=10">
+<link rel="stylesheet" href="css/auth.css?v=10">
 </head>
 <body class="lms">
 <header class="topbar">
@@ -255,12 +255,13 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="js/common.js?v=5"></script>
-<script src="js/lms.js?v=5"></script>
+<script src="js/common.js?v=10"></script>
+<script src="js/lms.js?v=10"></script>
 <script>
 (function(){var h=new Date().getHours(),w=document.getElementById('wHi');if(w)w.textContent=h<12?'Good morning':h<17?'Good afternoon':'Good evening';
 document.querySelectorAll('[data-go]').forEach(function(b){b.onclick=function(){var n=document.querySelector('#lmsNav [data-view="'+b.dataset.go+'"]');if(n)n.click()}});
 var x=document.getElementById('exitLms');if(x)x.onclick=function(){var l=document.getElementById('logoutBtn');if(l)l.click();else location.href='index.html'};})();
 </script>
+<script src="js/edu.js?v=10"></script>
 </body>
 </html>
